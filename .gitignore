@@ -1,2 +1,4 @@
 info.hotoku.bkeep.plist
 *.log
+check.out
+check.err

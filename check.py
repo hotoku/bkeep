@@ -69,7 +69,10 @@ def parse(s):
 
 
 def check1(obj):
-    if int(obj["BatteryPercent"]) >= 10:
+    p = obj["Product"]
+    v = obj["BatteryPercent"]
+    logging.info("\t".join([f"product={p}", f"battery={v}"]))
+    if int(obj["BatteryPercent"]) >= 100:
         return ""
     return "{}: Battery is low ({})\n".format(
         obj["Product"],
